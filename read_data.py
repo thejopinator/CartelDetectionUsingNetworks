@@ -9,5 +9,8 @@ def load_data():
     from pyvis.network import Network  
     # Import dataset from .csv file for project piso
     df = pd.read_csv('Network_Dataset.csv')
+    # create date variable from date column
+    df.DATE = pd.to_datetime(df.DATE)
+    
     # return the dataframe
     return df
